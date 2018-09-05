@@ -45,3 +45,4 @@ Once in a while, you may need to cleanup resources (containers, volumes, images,
     $cd /opt/kubernetes/jira  # where the actual docker-compose.yml is.
     $kompose convert
     $
+https://kubernetes.io/blog/2017/08/kompose-helps-developers-move-docker/
