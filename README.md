@@ -38,3 +38,10 @@ Once in a while, you may need to cleanup resources (containers, volumes, images,
     $ docker-machine create --driver virtualbox --virtualbox-disk-size "40000" default
     
 # kubernetes
+
+
+# kompose 
+
+    $cd /opt/kubernetes/jira  # where the actual docker-compose.yml is.
+    $kompose convert
+    $
