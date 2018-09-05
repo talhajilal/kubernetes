@@ -1,0 +1,21 @@
+==How to build image with Dockerfile.
+
+1- Docker sample example file. 
+ 
+placed in this directory.
+
+2- command 
+<docker build -t image-name-you-want-call >
+
+
+3- Docker-compose
+
+<docker-compose.yml sample file already availble in this directory>
+
+a- <dcoker-compose build >  #For brand new docker-compose.yml we must have a build command. 
+
+b- After build run "up" for docker-compose>.
+<docker-compose up .>
+
+
+<note: "docker-compose build  command only build an image , but d>
