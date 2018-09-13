@@ -1,9 +1,9 @@
 version: '3'
 services:
   bitbucket:
-    image: bitbucket
+    image: bitbucket:latest
     ports:
-     - "8089:8080"
+     - "81:80"
     deploy:
       replicas: 4
     volumes:
