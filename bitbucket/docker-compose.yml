@@ -7,11 +7,11 @@ services:
     deploy:
       replicas: 4
     volumes:
-       - bitbucket:/var/atlassian/application-data/bitbucke
-       - bitbucket_install_dir:/opt/atlassian/bitbucket
-volumes:
-   bitbucket:
-     external: true     
-   bitbucket_install_dir:
-     external: true
+       - /docker/bitbucket/application-data/bitbucke:/var/atlassian/application-data/bitbucke
+       - /docker/bitbucket/atlassian/bitbucket:/opt/atlassian/bitbucket
+#volumes:
+#   bitbucket:
+#     external: true     
+#   bitbucket_install_dir:
+#     external: true
 
