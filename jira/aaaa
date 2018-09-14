@@ -1,0 +1,21 @@
+
+/etc/sudoers.d/16-dockeradmin 
+%dockeradmin        ALL=(ALL)       NOPASSWD: /usr/bin/docker
+%dockeradmin        ALL=(ALL)       NOPASSWD: /usr/bin/systemctl stop docker
+%dockeradmin        ALL=(ALL)       NOPASSWD: /usr/bin/systemctl start docker
+%dockeradmin        ALL=(ALL)       NOPASSWD: /usr/bin/systemctl restart docker
+%dockeradmin        ALL=(ALL)       NOPASSWD: /usr/bin/systemctl status docker
+%dockeradmin        ALL=(dockermgmt)       NOPASSWD: ALL
+
+
+
+
+
+
+
+vi /etc/auto.master.d/nfs.autofs
+/nfs /etc/auto.nfs –timeout 60 --ghost
+
+
+vi /etc/auto.nfs
+nfs -fstype=nfs,rw,bg,hard,intr,rsize=32768,wsize=32768,vers=3,proto=tcp,timeo=600,retrans=2,noatime,nodiratime,async 192.168.0.50:/nfs
