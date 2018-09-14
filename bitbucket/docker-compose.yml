@@ -2,6 +2,6 @@ version: '3'
 
 services:
   bitbucket:
-    image: bitbucket
+    image: cptactionhank/atlassian-bitbucket:latest
     ports:
       - '80:7990'
