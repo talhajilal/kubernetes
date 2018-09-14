@@ -65,3 +65,9 @@ lquscg3f0evn4xaqb1d74d0fn *  kuber-02         Ready   Active        Reachable
 mu39a4frfvs3fbqt2l8449te9    docker-swarm-02  Ready   Active        Reachable
 [root@kuber-02 ~]#
 
+
+
+== Docker swarm commands 
+docker stack deploy bitbucket  --compose-file docker-compose.yml 
+docker service update jira_jira  --publish-add 8080:8080
+docker network create --subnet 192.168.0.0/24 --aux-address "DefaultGatewayIPv4=192.168.0.1" --gateway=192.168.0.200 homenet
