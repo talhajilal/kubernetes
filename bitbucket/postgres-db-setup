@@ -1,0 +1,9 @@
+== Use the following instructions.
+
+ su - postgres
+ psql
+
+postgres=# CREATE DATABASE bitbucket WITH ENCODING='UTF8' OWNER=bitbucketuser CONNECTION LIMIT=-1;^C
+postgres=# CREATE DATABASE bitbucket WITH ENCODING='UTF8' OWNER=bitbucketuser CONNECTION LIMIT=-1;
+
+

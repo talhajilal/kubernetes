@@ -2,6 +2,18 @@ version: '3'
 
 services:
   bitbucket:
-    image: cptactionhank/atlassian-bitbucket:latest
+    image: bitbucket:latest
+    volumes:
+      - /docker/var/atlassian/bitbucket:/var/atlassian/bitbucket
     ports:
       - '80:7990'
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.01'
+          memory: 512M
+        reservations:
+         cpus: '0.01'
+         memory: 200M
+
