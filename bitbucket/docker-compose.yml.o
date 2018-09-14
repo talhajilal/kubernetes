@@ -1,0 +1,17 @@
+version: '3'
+services:
+  bitbucket:
+    image: bitbucket:latest
+    ports:
+     - "7990:8080"
+    deploy:
+      replicas: 4
+    volumes:
+       - /docker/bitbucket/application-data/bitbucke:/var/atlassian/application-data/bitbucke
+       - /docker/bitbucket/atlassian/bitbucket:/opt/atlassian/bitbucket
+#volumes:
+#   bitbucket:
+#     external: true     
+#   bitbucket_install_dir:
+#     external: true
+

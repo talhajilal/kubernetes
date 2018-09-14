@@ -1,0 +1,25 @@
+version: '3'
+services:
+  jira:
+    image: jira_jira:latest
+    volumes:
+       - /docker/jira/_data:/var/atlassian/jira
+    ports:
+       - "8080:8080"
+    deploy: 
+      replicas: 4
+      resources:
+        limits:
+          cpus: '0.01'
+          memory: 50M
+        reservations:
+         cpus: '0.01'
+         memory: 20M
+#volumes:
+#   jira: 
+#     driver: host
+#     driver_opts:
+#         source: /docker
+    # external: true
+    #
+    #

@@ -1,0 +1,15 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+   name: jira
+   labels:
+     app: jira-app
+spec:
+   volumes: 
+       - name: jira
+   containers:
+     - name: jira
+       image: jira-test:latest 
+       ports:
+         - containerPort: 8080

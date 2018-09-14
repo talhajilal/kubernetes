@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jira:
+    build: ./build/.
+    ports:
+     - "8089:8080"
+    volumes:
+       - jira:/var/atlassian/jira
+volumes:
+   jira: 
+     external: true
