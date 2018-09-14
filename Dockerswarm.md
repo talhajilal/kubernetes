@@ -1,6 +1,6 @@
 
-== create docker swarm cluster, 
-= create docker swarm manager. 
+# create docker swarm cluster, 
+## create docker swarm manager. 
 docker swarm init --advertise-addr=192.168.0.50 --listen-addr=192.168.0.50
 
 
@@ -23,12 +23,11 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 =============================================================================
 </p>
 
-= join docker swarm cluster as a worker node. 
+# join docker swarm cluster as a worker node. 
 
 docker swarm join --token SWMTKN-1-1shbho18pjg3vxwa58c3gm9ojshhlxv69g2pkjv4jf96ryo9a7-942skaao7luwxje3z16mdo3kr 192.168.0.50:2377
 
-
-= Join docker swarm cluster as a manager node. 
+# Join docker swarm cluster as a manager node. 
 
 <p>
 1- get docker swarm manager node token from manager node.
@@ -66,8 +65,7 @@ mu39a4frfvs3fbqt2l8449te9    docker-swarm-02  Ready   Active        Reachable
 [root@kuber-02 ~]#
 
 
-
-== Docker swarm commands 
+## Docker swarm commands 
 docker stack deploy bitbucket  --compose-file docker-compose.yml 
 docker service update jira_jira  --publish-add 8080:8080
 docker network create --subnet 192.168.0.0/24 --aux-address "DefaultGatewayIPv4=192.168.0.1" --gateway=192.168.0.200 homenet
