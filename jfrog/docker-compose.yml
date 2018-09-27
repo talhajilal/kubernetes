@@ -1,14 +1,14 @@
 version: '3'
 
 services:
-  bitbucket:
-    image: localhost:5000/bitbucket:latest
+  jfrog: 
+    image: jfrog:1
     volumes:
-      - "/docker/var/atlassian/bitbucket:/var/atlassian/bitbucket"
+      -  /docker/docker/jfrog/artifactory:/var/opt/jfrog/artifactory
     ports:
-      - '80:7990'
+      - '8081:8081'
     deploy:
-      replicas: 1
+      replicas: 2
       resources:
         limits:
           cpus: '0.01'
