@@ -4,7 +4,12 @@ services:
   bitbucket:
     image: bitbucket:latest
     volumes:
-      - /docker/var/atlassian/bitbucket:/var/atlassian/bitbucket
+        - type: volume
+          source: bitbucket_vol
+          target: /var/atlassian/bitbucket
+          volume:
+          nocopy: true
+     # - /docker/var/atlassian/bitbucket:/var/atlassian/bitbucket
     ports:
       - '80:7990'
     deploy:
@@ -17,3 +22,10 @@ services:
          cpus: '0.01'
          memory: 200M
 
+volumes:
+  bitbucket_vol:
+    driver: local
+    driver_opts:
+      type: "nfs"
+      o: addr=192.168.0.50,nolock,soft,rw
+      device: ":/nfs/shared/shared"
