@@ -1,0 +1,6 @@
+---
+# handlers file for kubernetes
+- name: restart k8s
+  service:
+    name: kube-apiserver
+    state: restarted

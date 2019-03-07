@@ -1,0 +1,7 @@
+---
+- name: kubernetes configuration
+  hosts: kub
+  gather_facts: yes
+  become: yes
+  roles:
+      - kubernetes

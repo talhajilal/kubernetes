@@ -1,0 +1,5 @@
+---
+# vars file for kubernetes
+    kuber_admin: 192.168.56.101
+    max_client: 200
+    port: 80898
